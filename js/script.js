@@ -3,11 +3,13 @@ function populateGrid(x){
 	div.id = "content";
 	document.body.appendChild(div);
 
+	var page_width = 960;
 	var gridSquares = (x>0)?x:16;
 	var boxWidth = 500;
 	var sqcolor = "blue";
 	var numberOfSquares = gridSquares * gridSquares;
-	var squaresize = 20;
+	var squaresize = Math.round(page_width/gridSquares) - 2;
+
 
 	$('#content').append('<table><tbody><tr>');
 	for (var i = 1; i < numberOfSquares+1; i++) {
